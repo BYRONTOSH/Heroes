@@ -11,6 +11,7 @@ import { HeroesComponent } from './components/heroes/heroes.component';
 import { HomeComponent } from './components/home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HeroeComponent } from './components/heroe/heroe.component';
+import { DetalleheroeComponent } from './components/detalleheroe/detalleheroe.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { HeroeComponent } from './components/heroe/heroe.component';
     AboutComponent,
     HeroesComponent,
     HomeComponent,
-    HeroeComponent
+    HeroeComponent,
+    DetalleheroeComponent
   ],
   imports: [
     BrowserModule,

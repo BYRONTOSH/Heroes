@@ -17,4 +17,9 @@ export class HeroesService {
   listarHeroe(){
     return this.http.get(this.URL)
   }
+
+  buscarHeroe(){
+    return this.http.get(this.URL)
+  }
+
 }

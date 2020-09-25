@@ -1,4 +1,6 @@
+import { ClassGetter } from '@angular/compiler/src/output/output_ast';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -6,10 +8,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
-  constructor() { }
+  
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+     
   }
 
+  buscador(dato:string){
+  }
+  
+  limpiar(){
+   (document.getElementById("busqueda") as HTMLInputElement).value="";
+  }
 }

@@ -1,5 +1,7 @@
+import { ClassGetter } from '@angular/compiler/src/output/output_ast';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+
 import { HeroesService } from 'src/app/service/heroes.service';
 
 @Component({
@@ -11,7 +13,6 @@ export class HeroeComponent implements OnInit {
   heroes;
   url;
   heroe = [];
-
   constructor(private router: ActivatedRoute, private hs: HeroesService) {}
 
   ngOnInit() {
@@ -21,9 +22,13 @@ export class HeroeComponent implements OnInit {
 
     this.hs.listarHeroe().subscribe((r) => {
       this.heroes = r;
-      console.log(this.heroes);
-
       this.heroe.push(this.heroes[this.url]);
     });
+
+
+  
+
   }
+
+  
 }
