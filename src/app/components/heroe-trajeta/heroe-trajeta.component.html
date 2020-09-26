@@ -1,0 +1,12 @@
+<div class="col mb-4">
+    <div class="card">
+        <img [src]="heroe.img" class="card-img-top" alt="..." width="100" height="100">
+        <div class="card-body">
+            <h5 class="card-title">{{heroe.nombre}}</h5>
+            <p class="card-text">{{heroe.bio}}</p>
+        </div>
+        <div class="card-footer">
+            <button [routerLink]="['/heroe',index]" class="btn btn-outline-info btn-block">Más informaciónnn</button>
+        </div>
+    </div>
+</div>

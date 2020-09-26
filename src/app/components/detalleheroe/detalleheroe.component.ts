@@ -9,25 +9,31 @@ import { HeroesService } from 'src/app/service/heroes.service';
 })
 export class DetalleheroeComponent implements OnInit {
 
-  url ;
-  heroes =[]
+  url;
+  heroes = []
+  heroesBusqueda = [];
   constructor(private router: ActivatedRoute, private hs: HeroesService) { }
 
   ngOnInit(): void {
 
     this.router.params.subscribe((r) => {
       this.url = r['detalle'];
-      this.heroes=[]
-    this.hs.buscarHeroe().subscribe((r)=>{
-      for (let i=0; i<=6 ;i++){
-      if(r[i].nombre.toUpperCase()===this.url.toUpperCase()){
-        this.heroes.push(r[i])
-        
-      }
-     }
-    })
-  });
+      this.heroes = []
+      this.hs.buscarHeroe().subscribe((r) => {
+        for (let i = 0; i <= 6; i++) {
+          if (r[i].nombre.toUpperCase() === this.url.toUpperCase()) {
+            this.heroes.push(r[i])
+            this.heroesBusqueda = this.heroes.map(function (obj) {
+              return {
+                nombre: obj.nombre,
+                img: obj.img,
+                bio: obj.bio,
+                posicion: i
+              };
+            });
+          }
+        }
+      })
+    });
   }
-
-
 }

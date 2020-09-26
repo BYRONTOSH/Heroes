@@ -12,6 +12,7 @@ import { HomeComponent } from './components/home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HeroeComponent } from './components/heroe/heroe.component';
 import { DetalleheroeComponent } from './components/detalleheroe/detalleheroe.component';
+import { HeroeTrajetaComponent } from './components/heroe-trajeta/heroe-trajeta.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { DetalleheroeComponent } from './components/detalleheroe/detalleheroe.co
     HeroesComponent,
     HomeComponent,
     HeroeComponent,
-    DetalleheroeComponent
+    DetalleheroeComponent,
+    HeroeTrajetaComponent
   ],
   imports: [
     BrowserModule,
